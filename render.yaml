@@ -1,0 +1,34 @@
+# Render Blueprint — https://docs.render.com/blueprint-spec
+services:
+  - type: web
+    name: linkedin-automation
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NEWSAPI_KEY
+        sync: false
+      - key: GNEWS_API_KEY
+        sync: false
+      - key: HUGGINGFACE_API_KEY
+        sync: false
+      - key: UNSPLASH_ACCESS_KEY
+        sync: false
+      - key: LINKEDIN_ACCESS_TOKEN
+        sync: false
+      - key: LINKEDIN_PERSON_URN
+        sync: false
+      - key: LINKEDIN_CLIENT_ID
+        sync: false
+      - key: LINKEDIN_CLIENT_SECRET
+        sync: false
+      - key: LINKEDIN_TOKEN_CREATED_AT
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: EMAIL_TO
+        sync: false
+      - key: PORT
+        value: "10000"
