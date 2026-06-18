@@ -1,0 +1,24 @@
+{
+  "name": "linkedin-automation",
+  "version": "1.0.0",
+  "description": "Automated LinkedIn posting with AI-generated content from daily tech news",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/node-cron": "^3.0.0",
+    "@types/nodemailer": "^6.4.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}
