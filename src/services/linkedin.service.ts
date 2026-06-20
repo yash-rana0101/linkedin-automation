@@ -9,7 +9,7 @@ import { log } from '../utils/logger';
 const LINKEDIN_API_BASE = 'https://api.linkedin.com/v2';
 
 /** Returns common LinkedIn API headers. */
-function getHeaders(): Record<string, string> {
+export function getHeaders(): Record<string, string> {
   const token = process.env.LINKEDIN_ACCESS_TOKEN;
   if (!token) throw new Error('LINKEDIN_ACCESS_TOKEN not set in .env');
 
@@ -21,7 +21,7 @@ function getHeaders(): Record<string, string> {
 }
 
 /** Returns the LinkedIn person URN. */
-function getPersonUrn(): string {
+export function getPersonUrn(): string {
   const urn = process.env.LINKEDIN_PERSON_URN;
   if (!urn) throw new Error('LINKEDIN_PERSON_URN not set in .env');
   return `urn:li:person:${urn}`;

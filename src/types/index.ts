@@ -103,3 +103,24 @@ export interface RunLogEntry {
   postId: string;
   success: boolean;
 }
+
+// ─── Manual Post ─────────────────────────────────────────────────────────────
+
+export interface MediaAttachment {
+  buffer: Buffer;
+  filename: string;
+  mimeType: string;
+  type: 'image' | 'video';
+}
+
+export interface ManualPostRequest {
+  text: string;
+  media: MediaAttachment[];
+}
+
+export interface ManualPostResult {
+  postId: string;
+  success: boolean;
+  timestamp: string;
+  mediaCount: number;
+}
